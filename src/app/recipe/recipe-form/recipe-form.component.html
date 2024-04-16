@@ -43,7 +43,7 @@
             <tbody>
               @for (ingredient of ingredientsForm.controls; track ingredient; let i = $index) {
                 <tr
-                  [formGroupName]="i">
+                  [formGroup]="ingredient">
                   <td>
                     <mat-form-field>
                       <mat-label>Nom</mat-label>
