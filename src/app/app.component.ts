@@ -2,7 +2,7 @@ import { Component, inject, signal } from '@angular/core';
 import { NavigationEnd, NavigationStart, Router, RouterOutlet } from '@angular/router';
 import { filter } from 'rxjs';
 import { takeUntilDestroyed } from '@angular/core/rxjs-interop';
-import { NgIf, NgClass } from '@angular/common';
+import { NgClass } from '@angular/common';
 import { HeaderComponent } from './header/header.component';
 
 @Component({
@@ -10,7 +10,7 @@ import { HeaderComponent } from './header/header.component';
     templateUrl: './app.component.html',
     styleUrls: ['./app.component.css'],
     standalone: true,
-    imports: [HeaderComponent, NgIf, NgClass, RouterOutlet]
+    imports: [HeaderComponent, NgClass, RouterOutlet]
 })
 export class AppComponent {
   title = 'start';
