@@ -1,4 +1,4 @@
-@if (!recipeList.length) {
+@if (!recipeList().length) {
   <section>
     <h1>Aucune recette sélectionnée</h1>
   </section>
@@ -6,7 +6,7 @@
   <section>
     <h1>Liste des ingrédients à acheter</h1>
     <ul>
-      @for (shoppingItem of shoppingList; track shoppingItem) {
+      @for (shoppingItem of shoppingList(); track shoppingItem) {
         <li>
           {{shoppingItem}}
         </li>
@@ -18,7 +18,7 @@
       Recette prévues
     </h1>
     <ul>
-      @for (recipe of recipeList; track recipe) {
+      @for (recipe of recipeList(); track recipe) {
         <li>
           {{recipe.type}} : {{recipe.name}} <button (click)="removeSelectedRecipe(recipe)"><mat-icon fontIcon="clear"></mat-icon></button>
         </li>

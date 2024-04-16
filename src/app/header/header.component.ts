@@ -13,5 +13,5 @@ import { MatToolbar } from '@angular/material/toolbar';
     imports: [MatToolbar, MatButton, RouterLink, RouterLinkActive, MatBadge, AsyncPipe]
 })
 export class HeaderComponent {
-  protected recipeSelectedEvent = inject(ShoppingService).recipeSelectedEvent;
+  protected recipeSelected = inject(ShoppingService).recipesSelected;
 }
