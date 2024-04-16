@@ -20,9 +20,8 @@
   <button mat-button color="primary" [routerLink]="'create'">Créer une recette</button>
 </section>
 
-@if (!displayIdeas) {
-  <button (click)="displayIdeas = true"><mat-icon fontIcon="people" /></button>
-}
-@if (!!displayIdeas) {
+@defer (prefetch on timer(5000); when displayIdeas) {
   <app-ideas />
+} @placeholder {
+  <button (click)="displayIdeas = true"><mat-icon fontIcon="people" /></button>
 }
